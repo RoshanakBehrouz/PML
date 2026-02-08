@@ -12,8 +12,8 @@ The core objective is to determine how well generative models can act as "distri
 * **CNN Classifier:** Baseline for predictive accuracy.
 * **Convolutional Autoencoder (CAE):** Deterministic reconstruction used for anomaly detection baseline.
 * **FC-VAE:** Fully connected Variational Autoencoder to assess linear vs. spatial latent structures.
-* **Conv-VAE (1):** Standard convolutional VAE for high-fidelity reconstruction.
-* **Conv-VAE (4):** Highly regularized VAE to encourage latent disentanglement.
+* **Conv-VAE (Beta=1):** Standard convolutional VAE for high-fidelity reconstruction.
+* **Conv-VAE (Beta=4):** Highly regularized VAE to encourage latent disentanglement.
 
 ---
 
@@ -41,7 +41,7 @@ Using reconstruction loss as an anomaly score, the models demonstrated varying s
 
 ### The -VAE Trade-off
 
-* **:** Prioritizes reconstruction quality, resulting in sharper images but higher KL Divergence.
-* **:** Prioritizes latent regularization, resulting in a smoother, more standard-normal latent space at the cost of blurrier reconstructions.
+Beta=1 **:** Prioritizes reconstruction quality, resulting in sharper images but higher KL Divergence.
+Beta=4 **:** Prioritizes latent regularization, resulting in a smoother, more standard-normal latent space at the cost of blurrier reconstructions.
 
 ---
