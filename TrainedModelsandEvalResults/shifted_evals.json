@@ -1,0 +1,162 @@
+[
+    {
+        "model": "cnn",
+        "dataset": "standard",
+        "accuracy": 0.9943,
+        "avg_loss": 0.000325
+    },
+    {
+        "model": "cae",
+        "dataset": "standard",
+        "recon_loss": 78.57065
+    },
+    {
+        "model": "fcVAE",
+        "dataset": "standard",
+        "elbo_loss": 106.128613,
+        "recon_loss": 87.449138,
+        "kl_div": 18.67948
+    },
+    {
+        "model": "convVAE",
+        "dataset": "standard",
+        "elbo_loss": 103.155762,
+        "recon_loss": 83.665444,
+        "kl_div": 19.490316
+    },
+    {
+        "model": "convVAE4",
+        "dataset": "standard",
+        "elbo_loss": 116.406963,
+        "recon_loss": 107.08285,
+        "kl_div": 9.324109
+    },
+    {
+        "model": "cnn",
+        "dataset": "rotated30",
+        "accuracy": 0.9508,
+        "avg_loss": 0.003414
+    },
+    {
+        "model": "cae",
+        "dataset": "rotated30",
+        "recon_loss": 105.87525
+    },
+    {
+        "model": "fcVAE",
+        "dataset": "rotated30",
+        "elbo_loss": 133.652887,
+        "recon_loss": 115.0988,
+        "kl_div": 18.554084
+    },
+    {
+        "model": "convVAE",
+        "dataset": "rotated30",
+        "elbo_loss": 128.451375,
+        "recon_loss": 108.883863,
+        "kl_div": 19.567497
+    },
+    {
+        "model": "convVAE4",
+        "dataset": "rotated30",
+        "elbo_loss": 138.820075,
+        "recon_loss": 129.372062,
+        "kl_div": 9.448016
+    },
+    {
+        "model": "cnn",
+        "dataset": "noisy",
+        "accuracy": 0.9893,
+        "avg_loss": 0.000538
+    },
+    {
+        "model": "cae",
+        "dataset": "noisy",
+        "recon_loss": 626.52015
+    },
+    {
+        "model": "fcVAE",
+        "dataset": "noisy",
+        "elbo_loss": 762.99975,
+        "recon_loss": 745.37555,
+        "kl_div": 17.624242
+    },
+    {
+        "model": "convVAE",
+        "dataset": "noisy",
+        "elbo_loss": 655.79095,
+        "recon_loss": 636.30755,
+        "kl_div": 19.483359
+    },
+    {
+        "model": "convVAE4",
+        "dataset": "noisy",
+        "elbo_loss": 578.7323,
+        "recon_loss": 568.51955,
+        "kl_div": 10.212787
+    },
+    {
+        "model": "cnn",
+        "dataset": "occluded",
+        "accuracy": 0.9302,
+        "avg_loss": 0.004856
+    },
+    {
+        "model": "cae",
+        "dataset": "occluded",
+        "recon_loss": 99.058887
+    },
+    {
+        "model": "fcVAE",
+        "dataset": "occluded",
+        "elbo_loss": 119.992013,
+        "recon_loss": 101.630081,
+        "kl_div": 18.361934
+    },
+    {
+        "model": "convVAE",
+        "dataset": "occluded",
+        "elbo_loss": 123.024075,
+        "recon_loss": 104.443194,
+        "kl_div": 18.580872
+    },
+    {
+        "model": "convVAE4",
+        "dataset": "occluded",
+        "elbo_loss": 129.228387,
+        "recon_loss": 120.593937,
+        "kl_div": 8.634467
+    },
+    {
+        "model": "cnn",
+        "dataset": "labelshifted0to4",
+        "accuracy": 0.997081,
+        "avg_loss": 0.000146
+    },
+    {
+        "model": "cae",
+        "dataset": "labelshifted0to4",
+        "recon_loss": 75.940127
+    },
+    {
+        "model": "fcVAE",
+        "dataset": "labelshifted0to4",
+        "elbo_loss": 102.921604,
+        "recon_loss": 84.411547,
+        "kl_div": 18.510052
+    },
+    {
+        "model": "convVAE",
+        "dataset": "labelshifted0to4",
+        "elbo_loss": 100.289769,
+        "recon_loss": 81.105748,
+        "kl_div": 19.184014
+    },
+    {
+        "model": "convVAE4",
+        "dataset": "labelshifted0to4",
+        "elbo_loss": 112.582604,
+        "recon_loss": 103.223098,
+        "kl_div": 9.359504
+    }
+]
