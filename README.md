@@ -1,52 +1,47 @@
 
-
 # MNIST Anomaly & Shift Detection
 
-This project evaluates the robustness of discriminative and generative models—ranging from CNNs to VAEs—against data perturbations on the MNIST dataset.
+This project explores the intersection of classification and generative modeling to detect data shifts and anomalies. It implements a **CNN Digit Classifier**, a **Convolutional Autoencoder (CAE)**, and various **Variational Autoencoders (VAEs)** to analyze how different architectures perceive and reconstruct out-of-distribution (OOD) data.
 
-##  Project Overview
+## 🚀 Project Overview
 
-The goal is to analyze how different architectures perceive and reconstruct out-of-distribution (OOD) data. We demonstrate that generative models serve as effective anomaly detectors via reconstruction loss.
+The core objective is to determine how well generative models can act as "distributional monitors" for a standard classifier. By monitoring **Reconstruction Loss** and **Latent Space Drift**, we can identify when a model is encountering data it was not trained to handle.
 
 ### Included Models
 
-* **CNN Digit Classifier:** Evaluates predictive stability.
-* **Convolutional Autoencoder (CAE):** Evaluates deterministic reconstruction.
-* **FC-VAE:** Assesses linear vs. non-linear latent structures.
-* **Conv-VAE ():** Standard generative modeling.
-* **Conv-VAE ():** Disentangled latent modeling with enhanced regularization.
-
-## 📊 Data Shifts & Perturbations
-
-Models are tested against:
-
-* **Standard:** Clean MNIST test data.
-* **Rotated30:** Random rotation .
-* **Noisy:** Gaussian Noise ().
-* **Occluded:**  black patches.
-* **Label Shift:** Evaluation on digits 0–4 only.
-
-##  Key Findings
-
-* **Anomaly Detection:** All models achieved a perfect **1.000 AUC** for "Noisy" data.
-* **Structural Sensitivity:** The **CAE** proved most sensitive to rotation with the highest AUC of **0.691**.
-* **The  Trade-off:**  prioritizes reconstruction quality, while  prioritizes latent regularization (lower KL divergence).
+* **CNN Classifier:** Baseline for predictive accuracy.
+* **Convolutional Autoencoder (CAE):** Deterministic reconstruction used for anomaly detection baseline.
+* **FC-VAE:** Fully connected Variational Autoencoder to assess linear vs. spatial latent structures.
+* **Conv-VAE (1):** Standard convolutional VAE for high-fidelity reconstruction.
+* **Conv-VAE (4):** Highly regularized VAE to encourage latent disentanglement.
 
 ---
 
-### 3. Save and Upload
+## 📊 Data Shifts & Perturbations
 
-Once you have pasted the text:
+Models are evaluated on five test sets to simulate real-world data degradation:
 
-1. **Save** the file.
-2. If you are using the **GitHub Website**: Open your repository, click "Add file" -> "Upload files," and drag your `README.md` there.
-3. If you are using the **Terminal**:
-```bash
-git add README.md
-git commit -m "Add project documentation"
-git push origin main
+* **Standard:** Clean MNIST test data.
+* **Rotated30:** Images rotated by  degrees.
+* **Noisy:** Addition of Gaussian noise ().
+* **Occluded:**  pixel patches removed from the image.
+* **Label Shift:** Evaluation on a subset containing only digits 0–4.
 
-```
+---
 
+## 📈 Key Results
 
+### Anomaly Detection (ROC-AUC)
 
+Using reconstruction loss as an anomaly score, the models demonstrated varying sensitivities to data shifts:
+
+* **Noisy Data:** All models achieved a perfect **1.000 AUC**, showing extreme sensitivity to pixel-level noise.
+* **Rotated Data:** The **CAE** was the top performer with an **0.691 AUC**, followed closely by the Conv-VAE at 0.685.
+* **Occluded Data:** The **Conv-VAE ()** led with a **0.662 AUC**.
+
+### The -VAE Trade-off
+
+* **:** Prioritizes reconstruction quality, resulting in sharper images but higher KL Divergence.
+* **:** Prioritizes latent regularization, resulting in a smoother, more standard-normal latent space at the cost of blurrier reconstructions.
+
+---
