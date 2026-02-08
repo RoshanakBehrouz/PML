@@ -1,9 +1,4 @@
-To put this text into your GitHub README, you will need to create a specific file in your project folder and paste the content into it.
 
-Here is the step-by-step process:
-
-
----
 
 # MNIST Anomaly & Shift Detection
 
