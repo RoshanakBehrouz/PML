@@ -37,7 +37,7 @@ Using reconstruction loss as an anomaly score, the models demonstrated varying s
 
 * **Noisy Data:** All models achieved a perfect **1.000 AUC**, showing extreme sensitivity to pixel-level noise.
 * **Rotated Data:** The **CAE** was the top performer with an **0.691 AUC**, followed closely by the Conv-VAE at 0.685.
-* **Occluded Data:** The **Conv-VAE ()** led with a **0.662 AUC**.
+* **Occluded Data:** The **Conv-VAE (Beta=1)** led with a **0.662 AUC**.
 
 ### The -VAE Trade-off
 
